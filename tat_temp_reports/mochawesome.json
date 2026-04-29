@@ -1,0 +1,214 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 3,
+    "pending": 0,
+    "failures": 3,
+    "testsRegistered": 6,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2026-04-29T01:21:45.507Z",
+    "end": "2026-04-29T01:22:12.083Z",
+    "duration": 26576
+  },
+  "results": [
+    {
+      "uuid": "fa81c848-7070-4381-abc8-ccfe61eed762",
+      "title": "",
+      "fullFile": "cypress\\e2e\\spec.cy.js",
+      "file": "cypress\\e2e\\spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b5dffd13-d1b8-48ef-9f0e-c37161de7544",
+          "title": "Teste de Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cadastra Usuario Administrador",
+              "fullTitle": "Teste de Login Cadastra Usuario Administrador",
+              "timedOut": null,
+              "duration": 3982,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://front.serverest.dev/login');\ncy.get('[data-testid=\"cadastrar\"]').click();\ncy.get('[data-testid=\"nome\"]').click();\ncy.get('[data-testid=\"nome\"]').type('Adriano1');\ncy.get('[data-testid=\"email\"]').click();\ncy.get('[data-testid=\"email\"]').type('adriano.moura@totvs.com.br');\ncy.get('[data-testid=\"password\"]').click();\ncy.get('[data-testid=\"password\"]').click();\ncy.get('[data-testid=\"password\"]').type('123456');\ncy.get('[data-testid=\"checkbox\"]').check();\ncy.get('[data-testid=\"cadastrar\"]').click;",
+              "err": {},
+              "uuid": "04fe2930-a167-45e3-8115-7bc58145119f",
+              "parentUUID": "b5dffd13-d1b8-48ef-9f0e-c37161de7544",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cadastra Usuario Comum",
+              "fullTitle": "Teste de Login Cadastra Usuario Comum",
+              "timedOut": null,
+              "duration": 2066,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://front.serverest.dev/login');\ncy.get('[data-testid=\"cadastrar\"]').click();\ncy.get('[data-testid=\"nome\"]').click();\ncy.get('[data-testid=\"nome\"]').type('Adriano');\ncy.get('[data-testid=\"email\"]').click();\ncy.get('[data-testid=\"email\"]').type('adrianopuc@yahoo.com.br');\ncy.get('[data-testid=\"password\"]').click();\ncy.get('[data-testid=\"password\"]').type('123456');\ncy.get('[data-testid=\"cadastrar\"]').click();",
+              "err": {},
+              "uuid": "f726a620-75b2-415f-a92f-07c178a05109",
+              "parentUUID": "b5dffd13-d1b8-48ef-9f0e-c37161de7544",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com sucesso",
+              "fullTitle": "Teste de Login Login com sucesso",
+              "timedOut": null,
+              "duration": 1392,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://front.serverest.dev/login');\ncy.get('[data-testid=\"email\"]').click();\ncy.get('[data-testid=\"email\"]').type('adrianopuc@yahoo.com.br');\ncy.get('[data-testid=\"senha\"]').click();\ncy.get('[data-testid=\"senha\"]').type('123456');\ncy.get('[data-testid=\"entrar\"]').click();",
+              "err": {},
+              "uuid": "07f5cdb4-0a88-4bf1-b9be-750dc902feba",
+              "parentUUID": "b5dffd13-d1b8-48ef-9f0e-c37161de7544",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com falha tratado",
+              "fullTitle": "Teste de Login Login com falha tratado",
+              "timedOut": null,
+              "duration": 5735,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://front.serverest.dev/login');\ncy.get('[data-testid=\"email\"]').click();\ncy.get('[data-testid=\"email\"]').type('adrianopuc@yahoo.com.br');\ncy.get('[data-testid=\"senha\"]').click();\ncy.get('[data-testid=\"senha\"]').type('123');\ncy.get('[data-testid=\"entrar\"]').click();\ncy.get('#root span:nth-child(2)').contains('Email e/ou senha inválidos');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#root span:nth-child(2)`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#root span:nth-child(2)`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/spec.cy.js:50:7)",
+                "diff": null
+              },
+              "uuid": "792fac58-6dc1-4796-9c90-f5da75245062",
+              "parentUUID": "b5dffd13-d1b8-48ef-9f0e-c37161de7544",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com falha NÃO tratado",
+              "fullTitle": "Teste de Login Login com falha NÃO tratado",
+              "timedOut": null,
+              "duration": 5791,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://front.serverest.dev/login');\ncy.get('[data-testid=\"email\"]').click();\ncy.get('[data-testid=\"email\"]').type('adrianopuc@yahoo.com');\ncy.get('[data-testid=\"senha\"]').click();\ncy.get('[data-testid=\"senha\"]').type('654321');\ncy.get('[data-testid=\"entrar\"]').click();\ncy.get('#root span:nth-child(2)').contains('MENSAGEM DE ERRO DO CYPRESS - login falhou');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'MENSAGEM DE ERRO DO CYPRESS - login falhou' within the element: <span> but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'MENSAGEM DE ERRO DO CYPRESS - login falhou' within the element: <span> but never did.\n    at Context.eval (webpack:///./cypress/e2e/spec.cy.js:60:38)",
+                "diff": null
+              },
+              "uuid": "378be92b-c07a-4721-8f01-f470d9da56d1",
+              "parentUUID": "b5dffd13-d1b8-48ef-9f0e-c37161de7544",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com falha - Click em algo que não Existe",
+              "fullTitle": "Teste de Login Login com falha - Click em algo que não Existe",
+              "timedOut": null,
+              "duration": 5212,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://front.serverest.dev/login');\ncy.get('[data-testid=\"email\"]').click();\ncy.get('[data-testid=\"email\"]').type('adrianopuc@yahoo.com');\ncy.get('[data-testid=\"ERRADO\"]').click();\ncy.get('[data-testid=\"senha\"]').type('654321');\ncy.get('[data-testid=\"ERRADO\"]').click();\ncy.get('#root span:nth-child(2)').contains('MENSAGEM DE ERRO DO CYPRESS - botão não existe.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-testid=\"ERRADO\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-testid=\"ERRADO\"]`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/spec.cy.js:67:7)",
+                "diff": null
+              },
+              "uuid": "b941165f-dbc3-4265-b121-580d30ccca2d",
+              "parentUUID": "b5dffd13-d1b8-48ef-9f0e-c37161de7544",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "04fe2930-a167-45e3-8115-7bc58145119f",
+            "f726a620-75b2-415f-a92f-07c178a05109",
+            "07f5cdb4-0a88-4bf1-b9be-750dc902feba"
+          ],
+          "failures": [
+            "792fac58-6dc1-4796-9c90-f5da75245062",
+            "378be92b-c07a-4721-8f01-f470d9da56d1",
+            "b941165f-dbc3-4265-b121-580d30ccca2d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 24178,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "tat_temp_reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}
